@@ -1,0 +1,50 @@
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number plate Detector</title>
+        <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="static/css/main.css"> 
+
+	</head>
+<body>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <h1> Number Plate Detector </h1>
+  <div>
+    <label for="image_uploads">Choose car images to upload (PNG, JPG)</label>
+    <input type="file" id="image_upload" name="image_uploads" accept=".jpg, .jpeg, .png">
+  </div>
+  <p>  
+  </p>
+  <div>
+    <button>Submit & Verify</button>
+  </div>
+
+  <p>
+  <div>
+  <center>
+  <img src=" {{ image }} ">
+  </center>
+  </div>
+  </p>	
+</form>
+
+<form action = "/Get_number_plate" method = "POST">
+	<button>Get Number Plate</button>
+	<p>
+  <div>
+  <center>
+  <img src=" {{plate_image}} " height = '65' width = '250'>
+  </center>
+  </div>
+  </p>	
+</form>
+
+
+</body>
+</html>
+
+
+
